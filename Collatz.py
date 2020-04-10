@@ -70,9 +70,9 @@ def solve_equation(eq, steps) :
 def check_solution(eq,steps) :
     solutions = solve_equation(eq, steps)
     if len(solutions) > 0 :
-        print(eq)
-        print(steps)
-        print(solutions)
+        print("Equation:" + str(eq))
+        #print(steps)
+        print("Solutions:" + str(solutions))
         return True
     else:
         return False
@@ -106,4 +106,4 @@ def check_tree(length, eq = Var("n",odd=True), branch=0) :
     if not(found | eq.odd) :
         check_tree(length, collatz_step(eq,odd=True), branch + 1)
     return False
-check_tree(length = 5)
+check_tree(length = 3)
